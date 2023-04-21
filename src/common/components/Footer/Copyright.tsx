@@ -1,4 +1,3 @@
-import React from "react";
 // mui5
 import Typography from "@mui/material/Typography";
 

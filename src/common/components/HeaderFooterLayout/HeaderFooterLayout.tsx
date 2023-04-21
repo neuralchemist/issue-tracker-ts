@@ -1,13 +1,13 @@
-import React from "react";
+import { ReactNode } from "react";
 
-import { StyledHeaderFooterLayout, StyledMainContainer } from "./styles";
+import { StyledHeaderFooterLayout } from "./styles";
 // custom components
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import MainContainer from "./MainContainer";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function HeaderFooterLayout({ children }: Props) {
