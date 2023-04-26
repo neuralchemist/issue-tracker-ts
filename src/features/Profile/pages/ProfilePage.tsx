@@ -1,13 +1,11 @@
 // custom components
-import { Typography } from "@mui/material";
 import { HeaderFooterLayout } from "../../../common/components";
+import ProfileContainer from "../container/ProfileContainer";
 
 function ProfilePage() {
   return (
     <HeaderFooterLayout>
-      <Typography variant="h2" color="text.primary">
-        Profile
-      </Typography>
+      <ProfileContainer />
     </HeaderFooterLayout>
   );
 }
