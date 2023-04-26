@@ -19,8 +19,6 @@ function TextFieldCustom({ type = "text", label, name, required }: Props) {
 
   // mui config
   const muiConfig = {
-    // variant: "standard",
-    // margin: "normal",
     fullWidth: true,
   };
 
