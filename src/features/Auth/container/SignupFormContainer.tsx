@@ -33,7 +33,7 @@ function SignupFormContainer() {
 
       navigate(redirect_location);
     } catch (err) {
-      // console.error('SignUp Error: ',err);
+      console.error('SignUp Error: ',err);
       setErrorMessage("failed to sign up");
       setStatus("error");
     }
