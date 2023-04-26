@@ -13,11 +13,11 @@ import {
   ErrorMessage,
 } from "../../../../common/components";
 import { SignupValidator } from "../../validations";
-import { IStatus } from "../../../../common/types";
 import { ISignUp } from "../../types";
+import { QueryStatus } from "@tanstack/react-query";
 
 interface Props {
-  status: IStatus;
+  status: QueryStatus;
   errorMessage: string | null;
   onSubmit: (values: ISignUp) => Promise<void>;
 }

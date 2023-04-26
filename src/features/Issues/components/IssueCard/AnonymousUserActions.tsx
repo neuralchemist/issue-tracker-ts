@@ -1,5 +1,5 @@
 // styled components
-import { IIssue } from "../../../../common/types";
+import { IIssue } from "../../../../firebase/issues/types";
 import { StyledUserActions } from "./styles";
 // custom components
 import UserInfo from "./UserInfo";

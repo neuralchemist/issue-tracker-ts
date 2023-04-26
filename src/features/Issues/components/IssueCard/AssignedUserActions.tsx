@@ -3,7 +3,7 @@ import { StyledUserActions } from "./styles";
 // custom components
 import UserInfo from "./UserInfo";
 import ResolveIssueButton from "./ResolveIssueButton";
-import { IIssue } from "../../../../common/types";
+import { IIssue } from "../../../../firebase/issues/types";
 
 /**
  * issue is assigned to user.
@@ -20,7 +20,7 @@ function AssignedUserActions({ issue }: Props) {
       {/* assignee content */}
       <ResolveIssueButton issue={issue} />
       {/* author content */}
-      <UserInfo name={issue.author} label="By" />
+      <UserInfo name={issue.author} label="By:" />
     </StyledUserActions>
   );
 }

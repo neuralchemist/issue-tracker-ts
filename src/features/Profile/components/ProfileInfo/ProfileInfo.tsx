@@ -3,15 +3,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 // custom components
-import { IStatus } from "../../../../common/types";
 import { ErrorMessage } from "../../../../common/components";
 import { StyledProfileBox } from "./styles";
 import { IAuthUser } from "../../../../firebase/auth/types";
+import { QueryStatus } from "@tanstack/react-query";
 
 interface Props {
   user: IAuthUser | null;
   onSignout: () => Promise<void>;
-  status: IStatus;
+  status: QueryStatus;
   errorMessage: string | null;
 }
 

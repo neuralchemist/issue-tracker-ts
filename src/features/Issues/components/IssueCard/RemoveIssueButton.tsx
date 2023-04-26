@@ -17,6 +17,7 @@ function RemoveIssueButton({ issue }: Props) {
     // remove issue
     // delete_issue_state.mutate(issue.id);
     // redirected to home page onSuccess by useMutate to show updated content
+    alert(issue.title)
   };
   return (
     <Button

@@ -4,7 +4,7 @@ import { StyledUserActions } from "./styles";
 import EditIssueButton from "./EditIssueButton";
 import RemoveIssueButton from "./RemoveIssueButton";
 import UserInfo from "./UserInfo";
-import { IIssue } from "../../../../common/types";
+import { IIssue } from "../../../../firebase/issues/types";
 
 interface Props {
   issue: IIssue;

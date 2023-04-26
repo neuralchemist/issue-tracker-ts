@@ -14,12 +14,12 @@ import {
   SubmitButtonCustom,
   ErrorMessage,
 } from "../../../../common/components";
-import { IStatus } from "../../../../common/types";
 import { ISignIn } from "../../types";
 import defaultSigninValues from "./defaultSigninValues";
+import { QueryStatus } from "@tanstack/react-query";
 
 interface Props {
-  status: IStatus;
+  status: QueryStatus;
   errorMessage: string | null;
   onSubmit: (values: ISignIn) => Promise<void>;
 }

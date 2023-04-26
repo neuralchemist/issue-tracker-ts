@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../firebase/auth/hook";
 // custom routes
 import { ProfileInfo } from "../components";
-import { IStatus } from "../../../common/types";
 import { HOME } from "../../../common/utils/routes";
+import { QueryStatus } from "@tanstack/react-query";
 
 function ProfileContainer() {
   // status and error state
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [status, setStatus] = useState<IStatus>("typing");
+  const [status, setStatus] = useState<QueryStatus>("success");
   // react-router-dom logic
   const navigate = useNavigate();
 

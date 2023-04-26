@@ -1,6 +1,6 @@
 // mui 5
 import Chip from "@mui/material/Chip";
-import { IIssue } from "../../../../common/types";
+import { IIssue } from "../../../../firebase/issues/types";
 
 interface Props {
   issue: IIssue;

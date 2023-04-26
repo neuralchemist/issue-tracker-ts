@@ -6,13 +6,13 @@ import { useAuth } from "../../../firebase/auth/hook";
 // custom routes
 import { HOME } from "../../../common/utils/routes";
 import { SignupForm } from "../components";
-import { IStatus } from "../../../common/types";
 import { FieldValues } from "react-hook-form";
+import { QueryStatus } from "@tanstack/react-query";
 
 function SignupFormContainer() {
   // status and error state
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [status, setStatus] = useState<IStatus>("typing");
+  const [status, setStatus] = useState<QueryStatus>("success");
   // react-router-dom logic
   const navigate = useNavigate();
   const location = useLocation();

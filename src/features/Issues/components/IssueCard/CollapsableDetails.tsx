@@ -1,11 +1,10 @@
-import React from "react";
 // mui 5
 import CardContent from "@mui/material/CardContent";
 import Divider from "@mui/material/Divider";
 
 import Typography from "@mui/material/Typography";
 import Collapse from "@mui/material/Collapse";
-import { IIssue } from "../../../../common/types";
+import { IIssue } from "../../../../firebase/issues/types";
 
 /**
  * show details about the issue. Can be collapsed or expanded
