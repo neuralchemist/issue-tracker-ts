@@ -59,6 +59,7 @@ function HomePage() {
 
   // sort
   if (hasIssues) {
+    console.log('sorting issues in descending priority')
     filtered_sorted_issues?.sort(sortIssueInDescendingPriority);
   }
 
