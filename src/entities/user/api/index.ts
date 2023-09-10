@@ -1,9 +1,9 @@
 // firesotore
 import { doc, collection, setDoc, getDocs } from "firebase/firestore";
-import { db } from "../../config";
+import { db } from "../../../firebase/config";
 import { IUser } from "../types";
 
-class UsersService {
+class UserApi {
   private COLLECTION_NAME = "users";
   private collectionRef = collection(db, this.COLLECTION_NAME);
 
@@ -15,12 +15,11 @@ class UsersService {
   }
 
   async findAll(): Promise<IUser[]> {
-    const querySnapshot = await getDocs(this.collectionRef);
-    const userList = querySnapshot.docs.map((snapshot) => {
-      // doc.data() is never undefined for query doc snapshots
+    const snapshot = await getDocs(this.collectionRef);
+    const userList = snapshot.docs.map((item) => {
       const user = {
-        id: snapshot.id,
-        ...snapshot.data(),
+        id: item.id,
+        ...item.data(),
       };
       return user as IUser;
     });
@@ -29,4 +28,4 @@ class UsersService {
   }
 }
 
-export default UsersService;
+export const userApi = new UserApi();

@@ -1,5 +1,5 @@
+import { useFindAllUsers } from "../../../entities/user/hooks";
 import { UserCard, UserStack } from "../components";
-import { useFindAllUsers } from "../hooks";
 
 function UserListContainer() {
   const { users, status } = useFindAllUsers();

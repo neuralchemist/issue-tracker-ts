@@ -1,9 +1,8 @@
 // mui 5
 import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
-import { IIssue } from "../../../../firebase/issues/types";
-// custom hooks
-// import { useRemoveIssue } from "./hooks/useRemoveIssue";
+// custom types
+import { IIssue } from "../../../../entities/issue/types";
 
 interface Props {
   issue: IIssue;
@@ -17,7 +16,8 @@ function RemoveIssueButton({ issue }: Props) {
     // remove issue
     // delete_issue_state.mutate(issue.id);
     // redirected to home page onSuccess by useMutate to show updated content
-    alert(issue.title)
+    console.log(issue)
+    alert('sorry no can do');
   };
   return (
     <Button

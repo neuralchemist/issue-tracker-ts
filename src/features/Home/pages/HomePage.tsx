@@ -1,7 +1,6 @@
 // custom components
 import { useState } from "react";
 import { ErrorMessage, HeaderFooterLayout } from "../../../common/components";
-import { useFindAllIssues } from "../../Issues/hooks";
 import { IssueStack, IssueCard } from "../../Issues/components";
 import { sortIssueInDescendingPriority } from "../../Issues/utils";
 import { IIssue } from "../../../firebase/issues/types";
@@ -13,12 +12,13 @@ import {
   filterCreatedIssue,
   filterIssueByPriority,
 } from "../utils";
+import { useFindAllIssue } from "../../../entities/issue/hooks";
 
 function HomePage() {
   // set filter value
   const [filterValue, setFilterValue] = useState<IFilterValue>("all");
   // hook to fetch all issues form users collection
-  const { issues, status } = useFindAllIssues();
+  const { issues, status } = useFindAllIssue();
   // get auth user
   const { authUser } = useAuth();
 
@@ -59,7 +59,7 @@ function HomePage() {
 
   // sort
   if (hasIssues) {
-    console.log('sorting issues in descending priority')
+    console.log("sorting issues in descending priority");
     filtered_sorted_issues?.sort(sortIssueInDescendingPriority);
   }
 

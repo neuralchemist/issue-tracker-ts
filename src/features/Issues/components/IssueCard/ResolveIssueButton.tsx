@@ -2,8 +2,8 @@
 import Button from "@mui/material/Button";
 import DoneIcon from "@mui/icons-material/Done";
 import UndoIcon from "@mui/icons-material/Undo";
-import { IIssue, IIssueUpdatePartial } from "../../../../firebase/issues/types";
-import { useUpdateIssue } from "../../hooks";
+import { IIssue, IIssueUpdate } from "../../../../entities/issue/types";
+import { useUpdateIssue } from "../../../../entities/issue/hooks";
 
 interface Props {
   issue: IIssue;
@@ -11,7 +11,7 @@ interface Props {
 
 function ResolveIssueButton({ issue }: Props) {
   // custom update hook
-  const { updateIssueById, status } = useUpdateIssue();
+  const { updateIssue, status } = useUpdateIssue();
 
   const isResolved = issue.resolved;
 
@@ -20,11 +20,11 @@ function ResolveIssueButton({ issue }: Props) {
   const label_content = isResolved ? "Undo" : "Done";
 
   const handleClick = () => {
-    const partialIssue: IIssueUpdatePartial = {
+    const _issue: IIssueUpdate = {
       resolved: !issue.resolved,
     };
-    updateIssueById(issue.id, partialIssue);
-    // redirected to home page onSuccess by useMutate to show updated content
+    updateIssue(issue.id, _issue);
+    // will be redirected to home page onSuccess by useMutate 
   };
   return (
     <Button

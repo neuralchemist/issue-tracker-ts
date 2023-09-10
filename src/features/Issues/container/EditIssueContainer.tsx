@@ -1,23 +1,27 @@
+// react router
+import { useLocation } from "react-router-dom";
 import IssueForm from "../components/IssueForm/IssueForm";
 import { findAssignedTo, getOptionsFromAllUsers } from "../utils";
 import { IOptions } from "../../../common/types";
-import { IIssueCreateForm, IIssueUpdateForm } from "../types/issues.types";
-import {
-  IIssue,
-  IIssueUpdatePartial,
-} from "../../../firebase/issues/types";
-import { useFindAllUsers } from "../../Users/hooks";
-import { useUpdateIssue } from "../hooks";
 import { ErrorMessage } from "../../../common/components";
 import { useAuth } from "../../../firebase/auth/hook";
-import { IUser } from "../../../firebase/users/types";
-import { useLocation } from "react-router-dom";
+// custom types
+import { IIssue, IIssueUpdate } from "../../../entities/issue/types";
+import { IUser } from "../../../entities/user/types";
+// custom hooks
+import { useUpdateIssue } from "../../../entities/issue/hooks";
+import { useFindAllUsers } from "../../../entities/user/hooks";
+
+export type IIssueUpdateForm = Pick<
+  IIssue,
+  "title" | "description" | "priority" | "assigned_id"
+>;
 
 function EditIssueContainer() {
   // hook to fetch all users form users collection
   const { users, status: usersStatus } = useFindAllUsers();
   // hook to update issue
-  const { updateIssueById, status: issuesStatus } = useUpdateIssue();
+  const { updateIssue, status: issuesStatus } = useUpdateIssue();
   // current logged in user user
   const { authUser } = useAuth();
 
@@ -52,7 +56,7 @@ function EditIssueContainer() {
   }
 
   // extract default values from issue
-  const defaultIssueValues: IIssueCreateForm = {
+  const defaultIssueValues: IIssueUpdateForm = {
     assigned_id: issue.assigned_id,
     title: issue.title,
     description: issue.description,
@@ -62,13 +66,13 @@ function EditIssueContainer() {
   const onSubmit = async (values: IIssueUpdateForm) => {
     const assigned_user = findAssignedTo(allUsers, values.assigned_id);
     // add rest of the data
-    const partialIssue: IIssueUpdatePartial = {
+    const _issue: IIssueUpdate = {
       ...values,
       assigned_to: assigned_user.username,
     };
 
-    // add to firestore
-    updateIssueById(issue.id, partialIssue);
+    // add to database
+    updateIssue(issue.id, _issue);
   };
 
   return (

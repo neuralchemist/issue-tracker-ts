@@ -5,13 +5,19 @@ import {
   getOptionsFromAllUsers,
 } from "../utils";
 import { IOptions } from "../../../common/types";
-import { IIssueCreateForm } from "../types/issues.types";
-import { IIssueCreatePartial } from "../../../firebase/issues/types";
-import { useFindAllUsers } from "../../Users/hooks";
-import { useCreateIssue } from "../hooks";
 import { ErrorMessage } from "../../../common/components";
 import { useAuth } from "../../../firebase/auth/hook";
 import { IUser } from "../../../firebase/users/types";
+// custom types
+import { IIssue, IIssueCreate } from "../../../entities/issue/types";
+// custom hooks
+import { useFindAllUsers } from "../../../entities/user/hooks";
+import { useCreateIssue } from "../../../entities/issue/hooks";
+
+export type IIssueCreateForm = Pick<
+  IIssue,
+  "title" | "description" | "priority" | "assigned_id"
+>;
 
 function CreateIssueContainer() {
   // hook to fetch all users form users collection
@@ -50,7 +56,7 @@ function CreateIssueContainer() {
   const onSubmit = async (values: IIssueCreateForm) => {
     const assigned_user = findAssignedTo(allUsers, values.assigned_id);
     // add rest of the data
-    const partialIssue: IIssueCreatePartial = {
+    const _issue: IIssueCreate = {
       ...values,
       assigned_to: assigned_user.username,
       author_id: authUser?.id as string,
@@ -59,7 +65,7 @@ function CreateIssueContainer() {
     };
 
     // add to firestore
-    createIssue(partialIssue);
+    createIssue(_issue);
   };
 
   return (
