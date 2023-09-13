@@ -1,11 +1,8 @@
 // mui 5
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
-export const StyledProfileBox = styled(Box)(({ theme }) => ({
+export const StyledProfile = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(8),
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  background: theme.palette.background.paper,
+  // background: theme.palette.background.paper,
 }));

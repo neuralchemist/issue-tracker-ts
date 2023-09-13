@@ -4,14 +4,18 @@ import { Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // pages
-import HomePage from "./features/Home/pages/HomePage";
-import AdminPage from "./features/Admin/pages/AdminPage";
-import ProfilePage from "./features/Profile/pages/ProfilePage";
-import { SigninPage, SignupPage } from "./features/Auth/pages";
-import { CreateIssuePage, EditIssuePage } from "./features/Issues/pages";
+import {
+  // AdminPage,
+  ProfilePage,
+  SigninPage,
+  SignupPage,
+  CreateIssuePage,
+  EditIssuePage,
+  HomePage,
+} from "./pages";
 // custom routes
 import {
-  ADMIN,
+  // ADMIN,
   CREATEISSUE,
   EDITISSUE,
   HOME,
@@ -20,19 +24,20 @@ import {
   SIGNUP,
 } from "./common/utils/routes";
 import { ThemeProviderCustom } from "./common/context";
-import AuthUserProvider from "./firebase/auth/authProvider";
+// custom contexts
+import { AuthProvider } from "./entities/auth/context";
 
 // Create a client
 const queryClient = new QueryClient();
 
 function App() {
   return (
-    <AuthUserProvider>
+    <AuthProvider>
       <QueryClientProvider client={queryClient}>
         <ThemeProviderCustom>
           <Routes>
             <Route path={HOME} element={<HomePage />} />
-            <Route path={ADMIN} element={<AdminPage />} />
+            {/* <Route path={ADMIN} element={<AdminPage />} /> */}
             <Route path={PROFILE} element={<ProfilePage />} />
             <Route path={SIGNIN} element={<SigninPage />} />
             <Route path={SIGNUP} element={<SignupPage />} />
@@ -42,7 +47,7 @@ function App() {
         </ThemeProviderCustom>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
-    </AuthUserProvider>
+    </AuthProvider>
   );
 }
 

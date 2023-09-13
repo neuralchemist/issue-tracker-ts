@@ -8,7 +8,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { IIssue, IIssueCreate, IIssueUpdate } from "../types";
-import { db } from "../../../firebase/config";
+import { db } from "../../../firebase";
 
 class IssueApi {
   private COLLECTION_NAME = "issues";

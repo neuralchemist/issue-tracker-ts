@@ -9,7 +9,7 @@ import {
   IChildProps,
   IThemeModeContext,
   IThemeSetModeContext,
-} from "../utils/types";
+} from "../types";
 
 export const ThemeModeContext = createContext<IThemeModeContext | null>(null);
 export const ThemeSetModeContext = createContext<IThemeSetModeContext | null>(

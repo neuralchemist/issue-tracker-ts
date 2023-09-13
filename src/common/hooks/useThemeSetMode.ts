@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { IThemeSetModeContext } from "../utils/types";
+import { IThemeSetModeContext } from "../types";
 import { ThemeSetModeContext } from "../context/ThemeProviderCustom";
 
-function useThemeSetMode(): IThemeSetModeContext {
+export function useThemeSetMode(): IThemeSetModeContext {
   const currentThemeSetMode = useContext(ThemeSetModeContext);
   if (!currentThemeSetMode)
     throw new Error(
@@ -11,4 +11,3 @@ function useThemeSetMode(): IThemeSetModeContext {
   return currentThemeSetMode;
 }
 
-export default useThemeSetMode;

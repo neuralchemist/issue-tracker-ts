@@ -1,6 +1,6 @@
 // firesotore
 import { doc, collection, setDoc, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase/config";
+import { db } from "../../../firebase";
 import { IUser } from "../types";
 
 class UserApi {
@@ -9,7 +9,7 @@ class UserApi {
 
   async create({ id, email, username }: IUser): Promise<IUser["id"]> {
     const docRef = doc(this.collectionRef, id);
-    const userInfo = { username, email };
+    const userInfo = { email, displayName: username };
     await setDoc(docRef, userInfo);
     return docRef.id;
   }

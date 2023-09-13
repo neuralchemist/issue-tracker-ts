@@ -1,3 +1,1 @@
-import IssueFilter from "./IssueFilter";
-
-export { IssueFilter };
+export { IssueSection } from './IssueSection'
