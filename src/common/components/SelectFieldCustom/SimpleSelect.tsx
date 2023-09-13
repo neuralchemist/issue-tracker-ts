@@ -4,6 +4,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import FormHelperText from "@mui/material/FormHelperText";
+// custom types
+import { IOptions } from "../../../features/Issues/types";
 
 // react-hook-form
 import {
@@ -11,7 +13,6 @@ import {
   FieldValues,
   useFormContext,
 } from "react-hook-form";
-import { IOptions } from "../../types/form.types";
 
 interface Props {
   label: string;
@@ -21,7 +22,7 @@ interface Props {
   field: ControllerRenderProps<FieldValues, string>;
 }
 
-function SimpleSelect({ field, options, label, name, required }: Props) {
+export function SimpleSelect({ field, options, label, name, required }: Props) {
   // react-hook-form
   const {
     formState: { errors },
@@ -50,4 +51,3 @@ function SimpleSelect({ field, options, label, name, required }: Props) {
   );
 }
 
-export default SimpleSelect;

@@ -1,3 +1,12 @@
-import { IFilterValue } from "./home.types";
+export type IFilterValue =
+  | "all"
+  | "assigned"
+  | "created"
+  | "high"
+  | "medium"
+  | "low";
 
-export type { IFilterValue };
+export interface IFilterOption {
+  label: string;
+  value: IFilterValue;
+}

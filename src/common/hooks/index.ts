@@ -1,4 +1,2 @@
-import useThemeMode from "./useThemeMode";
-import useThemeSetMode from "./useThemeSetMode";
-
-export { useThemeMode, useThemeSetMode };
+export { useThemeMode } from './useThemeMode'
+export { useThemeSetMode } from './useThemeSetMode'

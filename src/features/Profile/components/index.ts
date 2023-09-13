@@ -1,3 +1,1 @@
-import ProfileInfo from "./ProfileInfo";
-
-export { ProfileInfo };
+export { ProfileInfo } from './ProfileInfo'

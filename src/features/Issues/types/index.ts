@@ -1,3 +1,13 @@
-import { IIssueCreateForm, IIssueUpdateForm } from "./issues.types";
+import { IIssue } from "../../../entities/issue/types";
 
-export type { IIssueCreateForm, IIssueUpdateForm };
+export type IIssueForm = Pick<
+  IIssue,
+  "title" | "description" | "priority" | "assigned_id"
+>;
+
+interface IOption {
+  label: string;
+  value: string;
+}
+
+export type IOptions = IOption[];
