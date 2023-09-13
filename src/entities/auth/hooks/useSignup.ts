@@ -3,7 +3,7 @@ import { MutateOptions, useMutation } from "@tanstack/react-query";
 // custom api
 import { authApi } from "../api";
 // custom types
-import { ISignup } from "../types.ts";
+import { ISignup } from "../types";
 
 export function useSignup() {
   // mutation function

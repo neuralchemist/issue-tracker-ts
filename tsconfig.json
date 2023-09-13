@@ -2,6 +2,14 @@
   "compilerOptions": {
     "rootDir": "./",
     "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@pages/*": ["src/pages/*"],
+      "@features/*": ["src/features/*"],
+      "@common/*": ["src/common/*"],
+      "@entities/*": ["src/entities/*"],
+      "@firebase/*": ["src/firebase/*"]
+    },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",

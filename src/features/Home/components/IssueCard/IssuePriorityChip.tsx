@@ -1,7 +1,7 @@
 // mui 5
 import Chip from "@mui/material/Chip";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 interface Props {
   priority: IIssue["priority"];

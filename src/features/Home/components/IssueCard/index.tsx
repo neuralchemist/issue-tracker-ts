@@ -13,9 +13,9 @@ import { CollapsableDetails } from "./CollapsableDetails";
 import { ExpandMore } from "./ExpandMore";
 import { IssuePriorityChip } from "./IssuePriorityChip";
 // types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 // custom hooks
-import { useAuth } from "../../../../entities/auth/hooks";
+import { useAuth } from "@entities/auth/hooks";
 // custom utils
 import { timeStampToDateString } from "../../utils";
 

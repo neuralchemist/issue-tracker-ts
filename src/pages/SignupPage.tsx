@@ -1,15 +1,15 @@
 // MUI 5
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 // custom components
-import { HeaderFooterLayout } from "../common/components";
+import { HeaderFooterLayout } from "@common/components";
 import {
   FormFootnote,
   FormIcon,
   FormLayout,
   SignupForm,
-} from "../features/Auth/components";
+} from "@features/Auth/components";
 // custom utils
-import { SIGNIN } from "../common/utils/routes";
+import { SIGNIN } from "@common/utils/routes";
 
 export function SignupPage() {
   return (

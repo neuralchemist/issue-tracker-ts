@@ -1,9 +1,9 @@
 // custom style
 import { StyledUserList } from "./styles";
 // custom components
-import { ErrorMessage } from "../../../../common/components";
+import { ErrorMessage } from "@common/components";
 // custom hooks
-import { useFindAllUsers } from "../../../../entities/user/hooks";
+import { useFindAllUsers } from "@entities/user/hooks";
 import { UserCard } from "../UserCard";
 
 export function UserList() {

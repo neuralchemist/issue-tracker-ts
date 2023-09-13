@@ -1,16 +1,16 @@
 // custom components
-import { ErrorMessage } from "../../../../common/components";
+import { ErrorMessage } from "@common/components";
 import { IssueForm } from "../IssueForm";
 // custom utils
 import { findAssignedTo, getOptionsFromAllUsers } from "../../utils";
 // custom hooks
-import { useFindAllUsers } from "../../../../entities/user/hooks";
-import { useCreateIssue } from "../../../../entities/issue/hooks";
-import { useAuth } from "../../../../entities/auth/hooks";
+import { useFindAllUsers } from "@entities/user/hooks";
+import { useCreateIssue } from "@entities/issue/hooks";
+import { useAuth } from "@entities/auth/hooks";
 // custom types
 import { IIssueForm, IOptions } from "../../types";
-import { IUser } from "../../../../entities/user/types";
-import { IIssueCreate } from "../../../../entities/issue/types";
+import { IUser } from "@entities/user/types";
+import { IIssueCreate } from "@entities/issue/types";
 
 const defaultValues: IIssueForm = {
   title: "",

@@ -1,4 +1,4 @@
-import { IIssue } from "../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 export type IIssueForm = Pick<
   IIssue,

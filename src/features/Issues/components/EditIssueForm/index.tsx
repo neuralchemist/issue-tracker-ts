@@ -1,15 +1,15 @@
 // react router
 import { useLocation } from "react-router-dom";
 // custom hooks
-import { useFindAllUsers } from "../../../../entities/user/hooks";
-import { useUpdateIssue } from "../../../../entities/issue/hooks";
-import { useAuth } from "../../../../entities/auth/hooks";
+import { useFindAllUsers } from "@entities/user/hooks";
+import { useUpdateIssue } from "@entities/issue/hooks";
+import { useAuth } from "@entities/auth/hooks";
 // custom types
-import { IIssue, IIssueUpdate } from "../../../../entities/issue/types";
+import { IIssue, IIssueUpdate } from "@entities/issue/types";
 import { IIssueForm, IOptions } from "../../types";
-import { IUser } from "../../../../entities/user/types";
+import { IUser } from "@entities/user/types";
 // custom components
-import { ErrorMessage } from "../../../../common/components";
+import { ErrorMessage } from "@common/components";
 import { IssueForm } from "../IssueForm";
 // custom utils
 import { findAssignedTo, getOptionsFromAllUsers } from "../../utils";

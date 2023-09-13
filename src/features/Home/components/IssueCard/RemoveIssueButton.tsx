@@ -2,7 +2,7 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 interface Props {
   issueId: IIssue["id"];

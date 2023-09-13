@@ -2,7 +2,7 @@ import { useState } from "react";
 // custom components
 import { IssueFilter } from "../IssueFilter";
 import { IssueStack } from "../IssueStack";
-import { ErrorMessage } from "../../../../common/components";
+import { ErrorMessage } from "@common/components";
 // custom utils
 import {
   sortIssueInDescendingPriority,
@@ -11,12 +11,12 @@ import {
   filterIssueByPriority,
 } from "../../utils";
 // custom hooks
-import { useFindAllIssue } from "../../../../entities/issue/hooks";
-import { useAuth } from "../../../../entities/auth/hooks";
+import { useFindAllIssue } from "@entities/issue/hooks";
+import { useAuth } from "@entities/auth/hooks";
 // custom types
 import { IFilterValue } from "../../types";
-import { IIssue } from "../../../../entities/issue/types";
-import { IUser } from "../../../../entities/user/types";
+import { IIssue } from "@entities/issue/types";
+import { IUser } from "@entities/user/types";
 
 export function IssueSection() {
   const [filterValue, setFilterValue] = useState<IFilterValue>("all");

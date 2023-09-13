@@ -2,10 +2,10 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 // firebase
 import { User, onAuthStateChanged } from "firebase/auth";
 // custom types
-import { IAuthContext } from "../types.ts/index.js";
+import { IAuthContext } from "../types";
 // custom types
-import { IUser } from "../../user/types/index.js";
-import { auth } from "../../../firebase/index.js";
+import { IUser } from "@entities/user/types";
+import { auth } from "@firebase/index";
 
 interface Props {
   children: ReactNode;
@@ -14,7 +14,6 @@ interface Props {
 export const AuthContext = createContext<IAuthContext>({ user: null });
 
 export function AuthProvider({ children }: Props) {
-
   const [user, setUser] = useState<IUser | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 

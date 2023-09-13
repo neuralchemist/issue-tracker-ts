@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // react-query
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 // custom utils
-import { HOME } from "../../../common/utils/routes";
+import { HOME } from "@common/utils/routes";
 import { ISSUE_CACHENAME } from "../utils";
 // custom types
 import { IIssue, IIssueUpdate } from "../types";

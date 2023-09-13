@@ -11,11 +11,11 @@ import {
   TextFieldCustom,
   SubmitButtonCustom,
   ErrorMessage,
-} from "../../../../common/components";
+} from "@common/components";
 // custom hooks
-import { useSignup } from "../../../../entities/auth/hooks";
-import { signupValidator } from "../../../../entities/auth/validators";
-import { HOME } from "../../../../common/utils/routes";
+import { useSignup } from "@entities/auth/hooks";
+import { signupValidator } from "@entities/auth/validators";
+import { HOME } from "@common/utils/routes";
 
 const defaultValues = {
   username: "",

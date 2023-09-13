@@ -3,7 +3,7 @@ import { MutateOptions, useMutation } from "@tanstack/react-query";
 // custom api
 import { authApi } from "../api";
 // custom types
-import { ISignin } from "../types.ts";
+import { ISignin } from "../types";
 
 export function useSignin() {
   console.log("%cuseSignin:", "color: orange");
