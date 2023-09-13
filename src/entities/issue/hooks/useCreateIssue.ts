@@ -8,7 +8,7 @@ import { IIssue, IIssueCreate } from "../types";
 import { issueApi } from "../api";
 // custom utils
 import { ISSUE_CACHENAME } from "../utils";
-import { HOME } from "../../../common/utils/routes";
+import { HOME } from "@common/utils/routes";
 
 export function useCreateIssue() {
   console.log("%cuseCreateIssue", "color: orange");

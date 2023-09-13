@@ -5,7 +5,7 @@ import { EditIssueButton } from "./EditIssueButton";
 import { RemoveIssueButton } from "./RemoveIssueButton";
 import { UserInfo } from "./UserInfo";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 interface Props {
   issue: IIssue;

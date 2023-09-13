@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { StyledUserCard } from "./styles";
-import { IUser } from "../../../../entities/user/types";
+import { IUser } from "@entities/user/types";
 
 interface Props {
   user: IUser;

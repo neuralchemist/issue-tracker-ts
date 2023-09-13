@@ -11,13 +11,13 @@ import {
   TextFieldCustom,
   SubmitButtonCustom,
   ErrorMessage,
-} from "../../../../common/components";
+} from "@common/components";
 // custom hoks
-import { useSignin } from "../../../../entities/auth/hooks";
+import { useSignin } from "@entities/auth/hooks";
 // custom validator
-import { signinValidator } from "../../../../entities/auth/validators";
+import { signinValidator } from "@entities/auth/validators";
 // custom utils
-import { HOME } from "../../../../common/utils/routes";
+import { HOME } from "@common/utils/routes";
 
 const defaultValues = {
   email: "",

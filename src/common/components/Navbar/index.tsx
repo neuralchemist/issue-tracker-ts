@@ -5,7 +5,7 @@ import { StyledAppBar, StyledToolbar, StyledIcon } from "./styles";
 // custom components
 import { BrandName } from "../BrandName";
 import { LinkButton } from "../LinkButton";
-import { ToggleThemeButton } from "..";
+import { ToggleThemeButton } from "../ToggleThemeButton";
 // custom utils
 import {
   // ADMIN,

@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 // custom components
-import { ErrorMessage } from "../../../../common/components";
+import { ErrorMessage } from "@common/components";
 // custom styles
 import { StyledProfile } from "./styles";
 // custom utils
-import { HOME } from "../../../../common/utils/routes";
+import { HOME } from "@common/utils/routes";
 // custom hooks
-import { useAuth, useSignout } from "../../../../entities/auth/hooks";
+import { useAuth, useSignout } from "@entities/auth/hooks";
 
 export function ProfileInfo() {
   // react-router logic

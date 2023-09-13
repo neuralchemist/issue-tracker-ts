@@ -3,7 +3,7 @@ import { StyledIssueStack } from "./styles";
 // custom components
 import { IssueCard } from "../IssueCard";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 
 interface Props {

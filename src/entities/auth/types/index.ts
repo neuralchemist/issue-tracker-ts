@@ -1,4 +1,4 @@
-import { IUser } from "../../user/types";
+import { IUser } from "@entities/user/types";
 
 export interface ISignup {
   email: string;

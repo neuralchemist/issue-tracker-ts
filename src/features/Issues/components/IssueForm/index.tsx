@@ -11,12 +11,12 @@ import {
   SubmitButtonCustom,
   TextAreaFieldCustom,
   TextFieldCustom,
-} from "../../../../common/components";
+} from "@common/components";
 
 // custom utils
 import { priority_options } from "../../utils";
 // custom validators
-import { issueValidator } from "../../../../entities/issue/validators";
+import { issueValidator } from "@entities/issue/validators";
 import { IIssueForm, IOptions } from "../../types";
 
 interface Props {

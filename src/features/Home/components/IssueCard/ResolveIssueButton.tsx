@@ -3,9 +3,9 @@ import Button from "@mui/material/Button";
 import DoneIcon from "@mui/icons-material/Done";
 import UndoIcon from "@mui/icons-material/Undo";
 // custom types
-import { IIssue, IIssueUpdate } from "../../../../entities/issue/types";
+import { IIssue, IIssueUpdate } from "@entities/issue/types";
 // custom hooks
-import { useUpdateIssue } from "../../../../entities/issue/hooks";
+import { useUpdateIssue } from "@entities/issue/hooks";
 
 interface Props {
   issueId: IIssue["id"];

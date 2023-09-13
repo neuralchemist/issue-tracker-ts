@@ -2,15 +2,15 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 // custom utils
-import { SIGNUP } from "../common/utils/routes";
+import { SIGNUP } from "@common/utils/routes";
 // custom components
 import {
   FormFootnote,
   FormIcon,
   FormLayout,
   SigninForm,
-} from "../features/Auth/components";
-import { HeaderFooterLayout } from "../common/components";
+} from "@features/Auth/components";
+import { HeaderFooterLayout } from "@common/components";
 
 export function SigninPage() {
   return (

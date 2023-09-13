@@ -1,7 +1,7 @@
 // styled components
 import { StyledUserActions } from "./styles";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 // custom components
 import { UserInfo } from "./UserInfo";
 

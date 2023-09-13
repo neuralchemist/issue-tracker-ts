@@ -12,7 +12,7 @@ import {
   CreateIssuePage,
   EditIssuePage,
   HomePage,
-} from "./pages";
+} from "@pages/index";
 // custom routes
 import {
   // ADMIN,
@@ -22,10 +22,10 @@ import {
   PROFILE,
   SIGNIN,
   SIGNUP,
-} from "./common/utils/routes";
-import { ThemeProviderCustom } from "./common/context";
+} from "@common/utils/routes";
+import { ThemeProviderCustom } from "@common/context";
 // custom contexts
-import { AuthProvider } from "./entities/auth/context";
+import { AuthProvider } from "@entities/auth/context";
 
 // Create a client
 const queryClient = new QueryClient();

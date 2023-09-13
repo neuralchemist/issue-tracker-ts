@@ -1,4 +1,4 @@
-import { IUser } from "../../../entities/user/types";
+import { IUser } from "@entities/user/types";
 import {  IOptions } from "../types";
 
 

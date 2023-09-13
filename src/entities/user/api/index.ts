@@ -1,6 +1,6 @@
 // firesotore
 import { doc, collection, setDoc, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase";
+import { db } from "@firebase/index";
 import { IUser } from "../types";
 
 class UserApi {

@@ -1,8 +1,8 @@
 // firestore
 import { Timestamp } from "firebase/firestore";
 // custom types
-import { IIssue, IPriority } from "../../../entities/issue/types";
-import { IUser } from "../../../entities/user/types";
+import { IIssue, IPriority } from "@entities/issue/types";
+import { IUser } from "@entities/user/types";
 import { IFilterOption } from "../types";
 
 export function filterCreatedIssue(issues: IIssue[], user: IUser) {

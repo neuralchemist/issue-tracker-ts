@@ -6,12 +6,12 @@ import {
   signOut,
 } from "firebase/auth";
 // custom auth
-import { auth } from "../../../firebase";
+import { auth } from "@firebase/index";
 // custom api
-import { userApi } from "../../user/api";
+import { userApi } from "@entities/user/api";
 // custom types
-import { IUser } from "../../user/types";
-import { ISignin, ISignup } from "../types.ts";
+import { IUser } from "@entities/user/types";
+import { ISignin, ISignup } from "../types";
 
 class AuthApi {
   async signup({ email, password, username }: ISignup): Promise<void> {

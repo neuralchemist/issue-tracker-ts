@@ -1,8 +1,8 @@
 // mui
 import { Container } from "@mui/material";
 // custom components
-import { HeaderFooterLayout } from "../common/components";
-import { CreateIssueForm } from "../features/Issues/components";
+import { HeaderFooterLayout } from "@common/components";
+import { CreateIssueForm } from "@features/Issues/components";
 
 export function CreateIssuePage() {
   return (

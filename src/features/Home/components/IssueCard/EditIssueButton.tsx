@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 // mui 5
 import EditIcon from "@mui/icons-material/Edit";
 import Button from "@mui/material/Button";
-import { IIssue } from "../../../../entities/issue/types";
+// custom types
+import { IIssue } from "@entities/issue/types";
 // custom utils
-import { EDITISSUE } from "../../../../common/utils/routes";
+import { EDITISSUE } from "@common/utils/routes";
 
 interface Props {
   issue: IIssue;

@@ -1,7 +1,7 @@
 // react-hook-form
 import { useFormContext, Controller } from "react-hook-form";
 import { SimpleSelect } from "./SimpleSelect";
-import { IOptions } from "../../../features/Issues/types";
+import { IOptions } from "@features/Issues/types";
 
 interface Props {
   label: string;

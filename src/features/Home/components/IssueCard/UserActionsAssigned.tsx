@@ -4,7 +4,7 @@ import { StyledUserActions } from "./styles";
 import { UserInfo } from "./UserInfo";
 import { ResolveIssueButton } from "./ResolveIssueButton";
 // custom types
-import { IIssue } from "../../../../entities/issue/types";
+import { IIssue } from "@entities/issue/types";
 
 /**
  * issue is assigned to user.
